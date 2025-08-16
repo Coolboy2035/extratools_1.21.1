@@ -22,7 +22,7 @@ license="${mod_license}"
 
 # The modid of the mod
 modId="${mod_id}" #mandatory
-
+logoFile="assets/extratoolsmod/textures/mod_icon.png"
 # The version number of the mod
 version="${mod_version}" #mandatory
 
@@ -73,6 +73,7 @@ description='''${mod_description}'''
     # An ordering relationship for the dependency.
     # BEFORE - This mod is loaded BEFORE the dependency
     # AFTER - This mod is loaded AFTER the dependency
+    mandatory=true
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT, or SERVER
     side="BOTH"

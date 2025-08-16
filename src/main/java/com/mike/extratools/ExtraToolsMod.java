@@ -1,7 +1,9 @@
 package com.mike.extratools;
 
+import com.mike.extratools.blocks.ModBlocks;
 import com.mike.extratools.item.ModCreativeModeTabs;
 import com.mike.extratools.item.ModItems;
+import net.minecraft.data.tags.TagsProvider;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,6 +38,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.concurrent.CompletableFuture;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ExtraToolsMod.MODID)
 public class ExtraToolsMod {
@@ -43,6 +47,8 @@ public class ExtraToolsMod {
     public static final String MODID = "extratoolsmod";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+    public static final String MOD_ID = "extratoolsmod";
+
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public ExtraToolsMod(IEventBus modEventBus, ModContainer modContainer) {
@@ -58,6 +64,8 @@ public class ExtraToolsMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
