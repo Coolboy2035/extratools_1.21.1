@@ -17,7 +17,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExtraToolsMod.MODID);
 
     public static final Supplier<CreativeModeTab> EXTRA_TOOLS_TAB = CREATIVE_MODE_TAB.register("extratools_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COPPER_HAMMER.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SILVER_INGOT.get()))
                     .title(Component.translatable("creativetab.extratoolsmod.extratools"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(Items.COPPER_INGOT);
