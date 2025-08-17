@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew build --stacktrace --scan  # 启用详细堆栈跟踪
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: my-mod-1.21.1
           path: |
