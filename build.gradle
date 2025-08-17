@@ -7,7 +7,6 @@ plugins {
 plugins {
     id 'java'
     id 'eclipse'
-    id 'maven-publish'
     id 'net.neoforged.gradle.userdev' version '7.0.80' // 确保版本兼容
 }
 tasks.named('wrapper', Wrapper).configure {
