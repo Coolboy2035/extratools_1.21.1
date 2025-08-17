@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 50
       - run: git fetch origin --tags
         shell: bash
-      - uses: Coolboy2035/extratoolsmod/.github/actions/gradle-setup@main
+      - uses: Coolboy2035/extratoolsmod/.github/@main
       - name: Build with Gradle
         run: ./gradlew printProjectVersion build publish -x check --max-workers 1
         env:
