@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 50
       - run: git fetch origin --tags
         shell: bash
-      - uses: AppliedEnergistics/Applied-Energistics-2/.github/actions/gradle-setup@main
+      - uses: AppliedEnergistics/extratoolsmod/.github/actions/gradle-setup@main
       - name: Build with Gradle
         run: ./gradlew printProjectVersion build publish -x check --max-workers 1
         env:
@@ -112,84 +112,3 @@ jobs:
           remote-repository-username: ${{ github.actor }}
           remote-repository-password: ${{ github.token }}
 
-  deploy-maven-central:
-    name: Deploy to Maven Central
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-artifacts
-      - name: Unpack build artifact
-        run: tar axf build.tar.zst
-      - name: Validate artifacts exist
-        run: test -d ./build
-      - name: Publish to Maven Central
-        uses: AppliedEnergistics/maven-central-publish-action@main
-        with:
-          local-repository-path: build/repo
-          username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-          password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
-
-  deploy-curseforge:
-    name: Deploy to Curseforge
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-artifacts
-      - name: Unpack build artifact
-        run: tar axf build.tar.zst
-      - name: Validate artifacts exist
-        run: test -d ./build
-      - name: Upload to Curseforge
-        uses: Kir-Antipov/mc-publish@995edadc13559a8b28d0b7e6571229f067ec7659
-        with:
-          name: AE2 ${{ needs.build.outputs.VERSION }} [NEOFORGE]
-          version: ${{ needs.build.outputs.VERSION }}
-          files: ${{ needs.build.outputs.ARTIFACT_PATH }}
-          dependencies: |
-            guideme(required){modrinth:Ck4E7v7R}{curseforge:1173950}
-            jade(optional){modrinth:nvQzSEkH}{curseforge:324717}
-            wthit(optional){modrinth:6AQIaxuO}{curseforge:440979}
-            rei(optional){modrinth:nfn13YXA}{curseforge:310111}
-            emi(optional){modrinth:fRiHVvU7}{curseforge:580555}
-            optifine(incompatible)
-            theoneprobe(optional){modrinth:Eyw0UxEx}{curseforge:245211}
-          curseforge-id: 223794
-          curseforge-token: ${{ secrets.CURSEFORGE }}
-          loaders: neoforge
-
-  deploy-modrinth:
-    name: Deploy to Modrinth
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-artifacts
-      - name: Unpack build artifact
-        run: tar axf build.tar.zst
-      - name: Validate artifacts exist
-        run: test -d ./build
-      - name: Upload to Modrinth
-        uses: Kir-Antipov/mc-publish@995edadc13559a8b28d0b7e6571229f067ec7659
-        with:
-          name: AE2 ${{ needs.build.outputs.VERSION }} [NEOFORGE]
-          version: ${{ needs.build.outputs.VERSION }}
-          files: ${{ needs.build.outputs.ARTIFACT_PATH }}
-          dependencies: |
-            guideme(required){modrinth:Ck4E7v7R}{curseforge:1173950}
-            jade(optional){modrinth:nvQzSEkH}{curseforge:324717}
-            wthit(optional){modrinth:6AQIaxuO}{curseforge:440979}
-            rei(optional){modrinth:nfn13YXA}{curseforge:310111}
-            emi(optional){modrinth:fRiHVvU7}{curseforge:580555}
-            optifine(incompatible)
-            theoneprobe(optional){modrinth:Eyw0UxEx}{curseforge:245211}
-          modrinth-id: XxWD5pD3
-          modrinth-token: ${{ secrets.MODRINTH }}
-          loaders: neoforge
