@@ -1,8 +1,8 @@
 package com.mike.extratoolsmod.datagen;
 
-import com.mike.extratoolsmod.ExtratoolsMod;
-import com.mike.extratoolsmod.block.ModBlocks;
-import com.mike.extratoolsmod.item.ModItems;
+import com.mike.extratools.ExtraToolsMod;
+import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, ExtratoolsMod.MOD_ID, existingFileHelper);
+        super(output, ExtraToolsMod.MOD_ID, existingFileHelper);
     }
 
     @Override

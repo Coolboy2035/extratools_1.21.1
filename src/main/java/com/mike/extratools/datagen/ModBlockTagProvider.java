@@ -1,8 +1,8 @@
-package com.mike.extratoolsmod.datagen;
+package com.mike.extratools.datagen;
 
-import com.mike.extratoolsmod.ExtratoolsMod;
-import com.mike.extratoolsmod.block.ModBlocks;
-import com.mike.extratoolsmod.util.ModTags;
+import com.mike.extratools.ExtraToolsMod;
+import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, ExtratoolsMod.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, ExtraToolsMod.MOD_ID, existingFileHelper);
     }
 
     @Override

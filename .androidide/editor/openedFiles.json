@@ -1,12 +1,27 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/data/extratoolsmod/minecraft/tags/item/pickaxes.json",
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModItems.java",
       "selection": {
         "end": {
-          "column": 1,
-          "index": 58,
-          "line": 4
+          "column": 37,
+          "index": 197,
+          "line": 5
+        },
+        "start": {
+          "column": 37,
+          "index": 197,
+          "line": 5
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/ExtraToolsMod.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
           "column": 0,
@@ -16,22 +31,22 @@
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/data/extratoolsmod/minecraft/tags/item/swords.json",
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModCreativeModeTabs.java",
       "selection": {
         "end": {
-          "column": 31,
-          "index": 49,
-          "line": 2
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 31,
-          "index": 49,
-          "line": 2
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/models/item/copper_hammer.json",
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModToolTiers.java",
       "selection": {
         "end": {
           "column": 0,
@@ -49,14 +64,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModBlockTagProvider.java",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 26,
+          "index": 151,
+          "line": 4
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 26,
+          "index": 151,
+          "line": 4
         }
       }
     },
@@ -64,14 +79,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModItemModelProvider.java",
       "selection": {
         "end": {
-          "column": 1,
-          "index": 1334,
-          "line": 33
+          "column": 26,
+          "index": 154,
+          "line": 4
         },
         "start": {
-          "column": 1,
-          "index": 1334,
-          "line": 33
+          "column": 26,
+          "index": 154,
+          "line": 4
         }
       }
     },
@@ -79,17 +94,32 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModItemTagProvider.java",
       "selection": {
         "end": {
-          "column": 52,
-          "index": 1107,
-          "line": 26
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 52,
-          "index": 1107,
-          "line": 26
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/util/ModTags.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModItemTagProvider.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/util/ModTags.java"
 }
