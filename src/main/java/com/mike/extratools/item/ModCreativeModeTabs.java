@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(Items.COPPER_INGOT);
                         output.accept(ModItems.COPPER_PICKAXE);
+                        output.accept(ModItems.COPPER_SWORD);
                         //output.accept(ModItems.COPPER_HAMMER);
                         output.accept(ModItems.SILVER_INGOT);
                         output.accept(ModBlocks.SILVER_BLOCK);
