@@ -29,6 +29,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SILVER_BLOCK);
 
                     }).build());
+    public static final Supplier<CreativeModeTab> EXTRA_PEERS_TAB = CREATIVE_MODE_TAB.register("extrapeers_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.xuanyu_block))
+                    .title(Component.translatable("creativetab.extratoolsmod.extrapeers"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.XUANYU_BLOCK);
+                        output.accept(ModBlocks.KAIWEN_BLOCK);
+
+                    }).build());
+
 
 
     public static void register(IEventBus eventBus){

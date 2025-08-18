@@ -20,6 +20,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SILVER_BLOCK = registerBlock("silver_block",
             ()-> new Block(BlockBehaviour.Properties.of()
                     .strength(5F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
+            ()-> new Block(BlockBehaviour.Properties.of()
+                    .sound(SoundType.CRYSTAL)));
+    public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
+            ()-> new Block(BlockBehaviour.Properties.of()
+                    .sound(SoundType.CRYSTAL)));
+
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
