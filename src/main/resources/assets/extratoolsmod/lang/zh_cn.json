@@ -1,10 +1,11 @@
 {
   "item.extratoolsmod.copper_hammer": "铜锤",
-
-
   "item.extratoolsmod.silver_ingot": "银锭",
+  
   "block.extratoolsmod.silver_block": "银块",
+  "block.extratoolsmod.xuanyu_block":"张轩瑀",
 
-  "creativetab.extratoolsmod.extratools": "更多工具"
+  "creativetab.extratoolsmod.extratools": "更多工具",
+  "creativetab.extratoolsmod.extrapeers":"更多同学们"
 
 }

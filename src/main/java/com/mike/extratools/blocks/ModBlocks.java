@@ -22,10 +22,10 @@ public class ModBlocks {
                     .strength(5F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.CRYSTAL)));
+                    .sound(SoundType.METAL)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.CRYSTAL)));
+                    .sound(SoundType.METAAL)));
 
 
 
