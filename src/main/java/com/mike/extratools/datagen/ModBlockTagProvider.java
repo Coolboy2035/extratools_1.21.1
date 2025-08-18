@@ -20,11 +20,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        tag(ModTags.Blocks.NEEDS_COPPER_TOOL)
+        tag(ModTags.Blocks.NEED_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
         tag(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
-                .remove(ModTags.Blocks.NEEDS_COPPER_TOOL);
+                .remove(ModTags.Blocks.NEED_COPPER_TOOL);
     }
 }
