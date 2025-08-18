@@ -21,8 +21,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        //tag(ItemTags.SWORDS)
-                //.add(ModItems.BISMUTH_SWORD.get());
+        tag(ItemTags.SWORDS)
+                .add(ModItems.BISMUTH_SWORD.get());
         tag(ItemTags.PICKAXES)
                 .add(ModItems.COPPER_PICKAXE.get());
         //tag(ItemTags.SHOVELS)
