@@ -22,7 +22,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         tag(ItemTags.SWORDS)
-                .add(ModItems.BISMUTH_SWORD.get());
+                .add(ModItems.COPPER_SWORD.get());
         tag(ItemTags.PICKAXES)
                 .add(ModItems.COPPER_PICKAXE.get());
         //tag(ItemTags.SHOVELS)

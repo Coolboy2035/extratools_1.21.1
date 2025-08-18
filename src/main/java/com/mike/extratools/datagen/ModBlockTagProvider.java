@@ -1,6 +1,6 @@
 package com.mike.extratoolsmod.datagen;
 
-import com.mike.extratoolsmod.TutorialMod;
+import com.mike.extratoolsmod.ExtratoolsMod;
 import com.mike.extratoolsmod.block.ModBlocks;
 import com.mike.extratoolsmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
