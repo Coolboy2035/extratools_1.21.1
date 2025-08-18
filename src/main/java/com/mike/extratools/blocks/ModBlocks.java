@@ -25,7 +25,7 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.METAAL)));
+                    .sound(SoundType.METAL)));
 
 
 

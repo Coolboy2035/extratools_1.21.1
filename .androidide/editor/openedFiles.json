@@ -1,137 +1,32 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModCreativeModeTabs.java",
-      "selection": {
-        "end": {
-          "column": 62,
-          "index": 1988,
-          "line": 36
-        },
-        "start": {
-          "column": 62,
-          "index": 1988,
-          "line": 36
-        }
-      }
-    },
-    {
       "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/blocks/ModBlocks.java",
       "selection": {
         "end": {
-          "column": 42,
-          "index": 1325,
+          "column": 41,
+          "index": 1324,
           "line": 27
         },
         "start": {
-          "column": 42,
-          "index": 1325,
+          "column": 41,
+          "index": 1324,
           "line": 27
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/blockstates/silver_block.json",
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModCreativeModeTabs.java",
       "selection": {
         "end": {
-          "column": 1,
-          "index": 89,
-          "line": 6
+          "column": 88,
+          "index": 1695,
+          "line": 32
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/blockstates/xuanyu_block.json",
-      "selection": {
-        "end": {
-          "column": 42,
-          "index": 70,
-          "line": 3
-        },
-        "start": {
-          "column": 42,
-          "index": 70,
-          "line": 3
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/models/block/silver_block.json",
-      "selection": {
-        "end": {
-          "column": 1,
-          "index": 108,
-          "line": 5
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/models/block/xuanyu_block.json",
-      "selection": {
-        "end": {
-          "column": 38,
-          "index": 95,
-          "line": 3
-        },
-        "start": {
-          "column": 38,
-          "index": 95,
-          "line": 3
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/models/item/silver_block.json",
-      "selection": {
-        "end": {
-          "column": 1,
-          "index": 49,
-          "line": 2
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/models/item/xuanyu_block.json",
-      "selection": {
-        "end": {
-          "column": 38,
-          "index": 40,
-          "line": 1
-        },
-        "start": {
-          "column": 38,
-          "index": 40,
-          "line": 1
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/lang/zh_cn.json",
-      "selection": {
-        "end": {
-          "column": 2,
-          "index": 94,
-          "line": 4
-        },
-        "start": {
-          "column": 2,
-          "index": 94,
-          "line": 4
+          "column": 88,
+          "index": 1695,
+          "line": 32
         }
       }
     }
