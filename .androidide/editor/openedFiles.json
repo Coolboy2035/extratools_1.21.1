@@ -1,17 +1,47 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModCreativeModeTabs.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/data/extratoolsmod/minecraft/tags/item/pickaxes.json",
       "selection": {
         "end": {
-          "column": 59,
-          "index": 1178,
-          "line": 23
+          "column": 1,
+          "index": 58,
+          "line": 4
         },
         "start": {
-          "column": 59,
-          "index": 1178,
-          "line": 23
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/data/extratoolsmod/minecraft/tags/item/swords.json",
+      "selection": {
+        "end": {
+          "column": 31,
+          "index": 49,
+          "line": 2
+        },
+        "start": {
+          "column": 31,
+          "index": 49,
+          "line": 2
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/models/item/copper_hammer.json",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
@@ -19,29 +49,29 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModBlockTagProvider.java",
       "selection": {
         "end": {
-          "column": 43,
-          "index": 84,
-          "line": 2
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 43,
-          "index": 84,
-          "line": 2
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     },
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/item/ModItems.java",
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModItemModelProvider.java",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 1,
+          "index": 1334,
+          "line": 33
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 1,
+          "index": 1334,
+          "line": 33
         }
       }
     },
@@ -49,17 +79,17 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModItemTagProvider.java",
       "selection": {
         "end": {
-          "column": 36,
-          "index": 1009,
-          "line": 24
+          "column": 52,
+          "index": 1107,
+          "line": 26
         },
         "start": {
-          "column": 36,
-          "index": 1009,
-          "line": 24
+          "column": 52,
+          "index": 1107,
+          "line": 26
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModBlockTagProvider.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/datagen/ModItemTagProvider.java"
 }
