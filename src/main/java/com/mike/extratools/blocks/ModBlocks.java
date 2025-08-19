@@ -20,8 +20,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SILVER_BLOCK = registerBlock("silver_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .strength(5F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
-
+                    .strength(1F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+                                        //破坏时间-4=实际填的数
 
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
