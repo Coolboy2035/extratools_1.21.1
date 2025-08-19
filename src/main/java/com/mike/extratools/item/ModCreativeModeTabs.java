@@ -31,7 +31,7 @@ public class ModCreativeModeTabs {
 
                     }).build());
     public static final Supplier<CreativeModeTab> EXTRA_PEERS_TAB = CREATIVE_MODE_TAB.register("extrapeers_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.KAIWEN_BLOCK))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.XUANYU_BLOCK))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(ExtraToolsMod.MOD_ID,"extratools_tab"))
                     .title(Component.translatable("creativetab.extratoolsmod.extrapeers"))
                     .displayItems((itemDisplayParameters, output) -> {
