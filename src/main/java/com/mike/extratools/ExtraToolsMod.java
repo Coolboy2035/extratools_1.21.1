@@ -1,6 +1,7 @@
 package com.mike.extratools;
 
 import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.component.ModDataComponents;
 import com.mike.extratools.item.ModCreativeModeTabs;
 import com.mike.extratools.item.ModItems;
 import net.minecraft.data.tags.TagsProvider;
@@ -65,6 +66,8 @@ public class ExtraToolsMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

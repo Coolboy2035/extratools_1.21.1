@@ -5,6 +5,7 @@ import com.mike.extratools.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -20,12 +21,17 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SILVER_BLOCK = registerBlock("silver_block",
             ()-> new Block(BlockBehaviour.Properties.of()
                     .strength(5F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
-            ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.METAL)));
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
+                    .noOcclusion().sound(SoundType.SLIME_BLOCK)));
+
+    //public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
+            //()-> new Block(BlockBehaviour.Properties.of()
+                    //.sound(SoundType.METAL)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.METAL)));
+                    .sound(SoundType.SLIME_BLOCK)));
 
 
 

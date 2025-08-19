@@ -1,4 +1,4 @@
-package com.mike.extratoolsmod.datagen;
+package com.mike.extratools.datagen;
 
 import com.mike.extratools.ExtraToolsMod;
 import com.mike.extratools.blocks.ModBlocks;
