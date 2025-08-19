@@ -27,8 +27,8 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
                     .noOcclusion().sound(SoundType.GLASS)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
-            ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.GLASS)));
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
+                    .noOcclusion().sound(SoundType.GLASS)));
 
 
 
