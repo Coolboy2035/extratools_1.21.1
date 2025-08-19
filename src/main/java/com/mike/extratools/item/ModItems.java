@@ -20,7 +20,7 @@ public class ModItems {
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.COPPER,1F,-2.8F))));
     public static final DeferredItem<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword",
             ()->new SwordItem(ModToolTiers.COPPER,new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.COPPER,4F,-1F))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.COPPER,3,-2.5F))));
 
 
 

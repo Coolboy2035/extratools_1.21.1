@@ -22,16 +22,13 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.of()
                     .strength(5F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
+
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
-                    .noOcclusion().sound(SoundType.SLIME_BLOCK)));
-
-    //public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
-            //()-> new Block(BlockBehaviour.Properties.of()
-                    //.sound(SoundType.METAL)));
+                    .noOcclusion().sound(SoundType.GLASS)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.SLIME_BLOCK)));
+                    .sound(SoundType.GLASS)));
 
 
 
