@@ -35,9 +35,56 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build -x test # 构建，但不重复运行测试
 
-    - name: Upload Artifact
+    - name: Extract mod_id and mod_version from gradle.properties
+      id: mod-info
+      run: |
+        echo "=== 读取 gradle.properties ==="
+        cat gradle.properties || echo "gradle.properties 不存在"
+        
+        # 读取 mod_id（支持多种属性名）
+        if [ -f "gradle.properties" ]; then
+          MOD_ID=$(grep -E "^(mod_id|id|modname)=" gradle.properties | head -1 | cut -d'=' -f2- | tr -d '\r' | xargs)
+          MOD_VERSION=$(grep -E "^(mod_version|version)=" gradle.properties | head -1 | cut -d'=' -f2- | tr -d '\r' | xargs)
+        fi
+        
+        # 设置默认值（如果没找到）
+        if [ -z "$MOD_ID" ]; then
+          MOD_ID="unknown-mod"
+          echo "警告: 未找到 mod_id，使用默认值"
+        fi
+        
+        if [ -z "$MOD_VERSION" ]; then
+          MOD_VERSION="unknown"
+          echo "警告: 未找到 mod_version，使用默认值"
+        fi
+        
+        # 清理可能的多余引号或空格
+        MOD_ID=$(echo "$MOD_ID" | sed 's/^"//;s/"$//;s/^'\''//;s/'\''$//')
+        MOD_VERSION=$(echo "$MOD_VERSION" | sed 's/^"//;s/"$//;s/^'\''//;s/'\''$//')
+        
+        echo "提取的 MOD_ID: '$MOD_ID'"
+        echo "提取的 MOD_VERSION: '$MOD_VERSION'"
+        echo "最终文件名: ${MOD_ID}-${MOD_VERSION}.jar"
+        
+        echo "MOD_ID=$MOD_ID" >> $GITHUB_OUTPUT
+        echo "MOD_VERSION=$MOD_VERSION" >> $GITHUB_OUTPUT
+        echo "ARTIFACT_NAME=${MOD_ID}-${MOD_VERSION}" >> $GITHUB_OUTPUT
+
+    - name: Extract and repackage without zip
+      run: |
+        JAR_FILE=$(find build/libs -name "*.jar" | head -1)
+        if [ -n "$JAR_FILE" ]; then
+          # 复制到根目录并重命名
+          cp "$JAR_FILE" "${{ steps.mod-info.outputs.ARTIFACT_NAME }}.jar"
+          echo "JAR文件已准备: ${{ steps.mod-info.outputs.ARTIFACT_NAME }}.jar"
+        else
+          echo "未找到JAR文件"
+          exit 1
+        fi
+
+    - name: Upload raw JAR file
       uses: actions/upload-artifact@v4
       with:
-        name: mod-package
-        path: build/libs/*.jar
-        retention-days: 5
+        name: ${{ steps.mod-info.outputs.ARTIFACT_NAME }}
+        path: ${{ steps.mod-info.outputs.ARTIFACT_NAME }}.jar
+        compression-level: 0
