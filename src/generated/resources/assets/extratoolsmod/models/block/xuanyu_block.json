@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extratoolsmod:block/xuanyu_block"
+  },
+  "render_type": "cutout"
+}
