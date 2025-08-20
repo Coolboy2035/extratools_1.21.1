@@ -22,7 +22,7 @@ license="${mod_license}"
 
 # The modid of the mod
 modId="${mod_id}" #mandatory
-logoFile="assets/extratoolsmod/textures/mod_icon.png"
+
 # The version number of the mod
 version="${mod_version}" #mandatory
 
@@ -87,8 +87,7 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 
-# Features are specific properties of the game environment, that you may want to declare you require. This example declares
-# that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
-# stop your mod loading on the server for example.
-#[features.${mod_id}]
-#openGLVersion="[3.2,)"
+
+
+[[modproperties.${mod_id}]]
+    catalogueImageIcon="mod_icon.png"
