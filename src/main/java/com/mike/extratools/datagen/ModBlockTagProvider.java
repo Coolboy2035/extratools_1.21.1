@@ -1,5 +1,4 @@
 package com.mike.extratools.datagen;
-
 import com.mike.extratools.ExtraToolsMod;
 import com.mike.extratools.blocks.ModBlocks;
 import com.mike.extratools.util.ModTags;
@@ -19,6 +18,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.SILVER_BLOCK.get())
+                .add(ModBlocks.XUANYU_BLOCK.get())
+                .add(ModBlocks.KAIWEN_BLOCK.get());
+
+
 
         tag(ModTags.Blocks.NEED_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);

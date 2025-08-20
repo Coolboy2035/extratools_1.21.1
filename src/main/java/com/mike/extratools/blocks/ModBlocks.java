@@ -28,7 +28,7 @@ public class ModBlocks {
                     .noOcclusion().sound(SoundType.GLASS)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
-                    .noOcclusion().sound(SoundType.GLASS)));
+                    .noOcclusion().sound(SoundType.GLASS).noLootTable()));
 
 
 
