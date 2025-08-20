@@ -35,21 +35,40 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build -x test # 构建，但不重复运行测试
 
-    - name: Extract mod name (safe version)
+    - name: Extract mod_id and mod_version from gradle.properties
       id: mod-info
       run: |
-          # 安全地提取模组名称
+          echo "=== 读取 gradle.properties ==="
+          cat gradle.properties || echo "gradle.properties 不存在"
+          
+          # 读取 mod_id（支持多种属性名）
           if [ -f "gradle.properties" ]; then
-            MOD_NAME=$(grep -E "^(mod_name|name|archivesBaseName)=" gradle.properties | head -1 | cut -d'=' -f2 | tr -d '\r' | xargs)
-            if [ -z "$MOD_NAME" ]; then
-              MOD_NAME="application"
-            fi
-          else
-            MOD_NAME="application"
+            MOD_ID=$(grep -E "^(mod_id|id|modname)=" gradle.properties | head -1 | cut -d'=' -f2- | tr -d '\r' | xargs)
+            MOD_VERSION=$(grep -E "^(mod_version|version)=" gradle.properties | head -1 | cut -d'=' -f2- | tr -d '\r' | xargs)
           fi
-          echo "MOD_NAME=$MOD_NAME" >> $GITHUB_OUTPUT
-          echo "Using mod name: $MOD_NAME"
-      
+          
+          # 设置默认值（如果没找到）
+          if [ -z "$MOD_ID" ]; then
+            MOD_ID="unknown-mod"
+            echo "警告: 未找到 mod_id，使用默认值"
+          fi
+          
+          if [ -z "$MOD_VERSION" ]; then
+            MOD_VERSION="unknown"
+            echo "警告: 未找到 mod_version，使用默认值"
+          fi
+          
+          # 清理可能的多余引号或空格
+          MOD_ID=$(echo "$MOD_ID" | sed 's/^"//;s/"$//;s/^'\''//;s/'\''$//')
+          MOD_VERSION=$(echo "$MOD_VERSION" | sed 's/^"//;s/"$//;s/^'\''//;s/'\''$//')
+          
+          echo "提取的 MOD_ID: '$MOD_ID'"
+          echo "提取的 MOD_VERSION: '$MOD_VERSION'"
+          echo "最终文件名: ${MOD_ID}-${MOD_VERSION}.jar"
+          
+          echo "MOD_ID=$MOD_ID" >> $GITHUB_OUTPUT
+          echo "MOD_VERSION=$MOD_VERSION" >> $GITHUB_OUTPUT
+          echo "ARTIFACT_NAME=${MOD_ID}-${MOD_VERSION}" >> $GITHUB_OUTPUT
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
