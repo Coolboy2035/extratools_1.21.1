@@ -40,6 +40,5 @@ jobs:
       with:
         name: mod
         path: build/libs/*.jar
-        compression-level: 0
         if-no-files-found: error
         retention-days: 5
