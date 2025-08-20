@@ -1,0 +1,53 @@
+name: Build and Release Mod
+
+on:
+  push:
+    tags: ['v*']  # 只在打tag时创建Release
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Extract mod info
+        id: mod-info
+        run: |
+          MOD_ID=$(grep '^mod_id=' gradle.properties | cut -d'=' -f2- | tr -d '\r' | xargs || echo "unknown")
+          MOD_VERSION=$(grep -E '^(mod_version|version)=' gradle.properties | head -1 | cut -d'=' -f2- | tr -d '\r' | xargs || echo "unknown")
+          echo "ARTIFACT_NAME=${MOD_ID}-${MOD_VERSION}" >> $GITHUB_OUTPUT
+          echo "RELEASE_NAME=${MOD_ID} v${MOD_VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build
+        run: ./gradlew build
+
+      - name: Upload Artifact (for branch builds)
+        if: github.event_name != 'push' || !startsWith(github.ref, 'refs/tags/')
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.mod-info.outputs.ARTIFACT_NAME }}
+          path: build/libs/*.jar
+          compression-level: 0
+
+      - name: Create GitHub Release (for tags)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/libs/*.jar
+          name: ${{ steps.mod-info.outputs.RELEASE_NAME }}
+          body: |
+            自动发布的模组版本
+            - **模组ID**: ${{ steps.mod-info.outputs.MOD_ID }}
+            - **版本**: ${{ steps.mod-info.outputs.MOD_VERSION }}
+            - **构建时间**: $(date)
+          draft: false
+          prerelease: false
