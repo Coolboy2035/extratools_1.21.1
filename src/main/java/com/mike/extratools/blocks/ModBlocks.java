@@ -24,7 +24,7 @@ public class ModBlocks {
                                         //破坏时间-4=实际填的数
 
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
-            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
+            ()-> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
                     .noOcclusion().sound(SoundType.GLASS)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
