@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Random;
 
 public class SoundBlock extends Block{
-    private static final SoundEvent[] SOUNDS{
+    private static final SoundEvent[] SOUNDS = {
         SoundEvents.VILLAGER_HURT,
         SoundEvents.VILLAGER_DEATH,
         SoundEvents.VILLAGER_YES,
