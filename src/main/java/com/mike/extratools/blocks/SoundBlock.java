@@ -1,6 +1,7 @@
 package com.mike.extratools.blocks;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ItemInteractionResult;
@@ -15,6 +16,14 @@ import net.minecraft.world.InteractionHand;
 import java.util.Random;
 
 public class SoundBlock extends Block {
+    private static final SoundEvent[] SOUNDS = {
+        SoundEvents.VILLAGER_AMBIENT,
+        SoundEvents.VILLAGER_HURT,
+        SoundEvents.VILLAGER_DEATH,
+        SoundEvents.VILLAGER_YES,
+        SoundEvents.VILLAGER_NO,
+        SoundEvents.VILLAGER_TRADE
+    };
 
     public SoundBlock(Properties properties) {
         super(properties);
@@ -24,11 +33,13 @@ public class SoundBlock extends Block {
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
             Random random = new Random();
-            // 简单测试：只播放一个声音
+            
+            SoundEvent soundToPlay = SOUNDS[random.nextInt(SOUNDS.length)];
+            
             level.playSound(
                 null,
                 pos,
-                SoundEvents.VILLAGER_HURT,
+                soundToPlay,
                 SoundSource.BLOCKS,
                 1.0F,
                 1.0F
