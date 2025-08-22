@@ -42,3 +42,7 @@ public class SoundBlock extends Block{
         }
 return InteractionResult.sidedSuccess(level.isClientSide());
 }
+    
+)
+    
+}
