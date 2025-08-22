@@ -31,7 +31,7 @@ public class SoundBlock extends Block{
     }
     
     @Override
-    protected InteractionResult useItemOn(ItemStack stack,BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
+    protected ItemInteractionResult useItemOn(ItemStack stack,BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
         if (!level.isClientSide()){
             Random random = new Random();
 
@@ -40,7 +40,7 @@ public class SoundBlock extends Block{
                     pos, soundToPlay, SoundSource.BLOCKS,1.0F,1.0F);
         
         }
-return InteractionResult.sidedSuccess(level.isClientSide());
+return ItemInteractionResult.sidedSuccess(level.isClientSide());
 }
     
 }
