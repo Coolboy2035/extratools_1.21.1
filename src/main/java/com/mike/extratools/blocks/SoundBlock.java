@@ -16,33 +16,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class SoundBlock extends Block implements SoundBlockPort {
-    private  static final List<SoundEvent> VILLAGER_SOUNDS = new ArrayList<>();
-    private int currentSoundIndex = 0;
-
-    static {
-        VILLAGER_SOUNDS.add(SoundEvents.VILLAGER_HURT);
-        VILLAGER_SOUNDS.add(SoundEvents.VILLAGER_DEATH);
-        VILLAGER_SOUNDS.add(SoundEvents.VILLAGER_YES);
-        VILLAGER_SOUNDS.add(SoundEvents.VILLAGER_NO);
-        VILLAGER_SOUNDS.add(SoundEvents.VILLAGER_AMBIENT);
-        VILLAGER_SOUNDS.add(SoundEvents.VILLAGER_TRADE);
-    }
+public class SoundBlock extends Block{
+    private static final SoundEvent[] SOUNDS{
+        SoundEvents.VILLAGER_HURT,
+        SoundEvents.VILLAGER_DEATH,
+        SoundEvents.VILLAGER_YES,
+        SoundEvents.VILLAGER_NO,
+        SoundEvents.VILLAGER_AMBIENT,
+        SoundEvents.VILLAGER_TRADE
+    };
 
     public SoundBlock(Properties properties) {
         super(properties);
     }
+    
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
-        if (!level.isClientSide && !VILLAGER_SOUNDS.isEmpty()){
+    protected InteractionResult useItemOn(ItemStack stack,BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult){
+        if (!level.isClientSide()){
             Random random = new Random();
 
-            SoundEvent randomSound = VILLAGER_SOUNDS.get(random.nextInt(VILLAGER_SOUNDS.size()));
+            SoundEvent soundToPlay = SOUNDS[random.nextInt(SOUNDS.length)];
             level.playSound(null,
-                    pos, randomSound, SoundSource.NEUTRAL,1.0F,1.0F);
-            currentSoundIndex = (currentSoundIndex + 1)% VILLAGER_SOUNDS.size();
+                    pos, soundToPlay, SoundSource.BLOCKS,1.0F,1.0F);
+        
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
-    }
-
+return InteractionResult.sidedSuccess(level.isClientSide());
 }
