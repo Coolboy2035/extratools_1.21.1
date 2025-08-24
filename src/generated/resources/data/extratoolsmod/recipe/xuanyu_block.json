@@ -8,17 +8,17 @@
   ],
   "key": {
     "A": {
-      "item": "corn_delight:taco"  // 其他模组的物品
+      "item": "corn_delight:taco"
     }
   },
   "result": {
-    "id": "extratoolsmod:xuanyu_block",        // 你的模组物品
+    "id": "extratoolsmod:xuanyu_block",
     "count": 1
   },
   "conditions": [
     {
       "type": "neoforge:mod_loaded",
-      "modid": "corn_delight"               // 只有当 othermodid 存在时才加载这个配方
+      "modid": "corn_delight"
     }
   ]
 }
