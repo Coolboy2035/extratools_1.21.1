@@ -3,8 +3,10 @@
   "item.extratoolsmod.copper_pickaxe": "铜镐",
   "item.extratoolsmod.copper_sword": "铜剑",
   "item.extratoolsmod.silver_ingot": "银锭",
-  
+  "item.extratoolsmod.silver_nugget": "银粒",
+
   "block.extratoolsmod.silver_block": "银块",
+  "block.extratoolsmod.silver_ore": "银矿",
   "block.extratoolsmod.xuanyu_block":"张轩瑀",
   "block.extratoolsmod.kaiwen_block": "郑凯文",
 
