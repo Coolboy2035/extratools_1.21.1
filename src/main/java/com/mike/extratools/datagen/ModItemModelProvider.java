@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.SILVER_INGOT.get());
+        basicItem(ModItems.SILVER_NUGGET.get());
 
 
         handheldItem(ModItems.COPPER_SWORD);

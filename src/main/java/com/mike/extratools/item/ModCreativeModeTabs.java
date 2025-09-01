@@ -26,6 +26,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.COPPER_PICKAXE);
                         
                         //output.accept(ModItems.COPPER_HAMMER);
+                        output.accept(ModItems.SILVER_NUGGET);
+                        output.accept(ModBlocks.SILVER_ORE);
                         output.accept(ModItems.SILVER_INGOT);
                         output.accept(ModBlocks.SILVER_BLOCK);
 
