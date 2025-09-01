@@ -16,6 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels(){
         blockWithItem(ModBlocks.SILVER_BLOCK);
+        blockWithItem(ModBlocks.SILVER_ORE);
         blockWithItem(ModBlocks.KAIWEN_BLOCK);
         blockWithItem(ModBlocks.XUANYU_BLOCK);
 

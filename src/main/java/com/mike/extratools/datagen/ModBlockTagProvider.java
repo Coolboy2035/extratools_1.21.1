@@ -20,6 +20,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SILVER_BLOCK.get())
+                    .add(ModBlocks.SILVER_ORE.get())
                 .add(ModBlocks.XUANYU_BLOCK.get())
                 .add(ModBlocks.KAIWEN_BLOCK.get());
 

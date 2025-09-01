@@ -1,6 +1,7 @@
 package com.mike.extratools.datagen;
 
 import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -16,6 +17,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.fml.common.Mod;
 
 import java.util.Set;
 
@@ -32,7 +34,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.XUANYU_BLOCK.get(), Items.COAL,2,5));
                                //createMultipleOreDrops(ModBlocks.XUANYU_BLOCK.get(), Items.COAL,2,5)
                                                                                  //ModItems.~.get()
-
+        add(ModBlocks.SILVER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.SILVER_NUGGET.get(),7,9));
     }
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);

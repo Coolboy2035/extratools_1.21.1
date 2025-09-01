@@ -22,7 +22,9 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.of()
                     .strength(1F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
                                         //破坏时间-4=实际填的数
-
+    public static final DeferredBlock<Block> SILVER_ORE = registerBlock("silver_ore",
+            ()-> new Block(BlockBehaviour.Properties.of()
+                    .sound(SoundType.STONE)));
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
             ()-> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
                     .noOcclusion().sound(SoundType.GLASS)));
