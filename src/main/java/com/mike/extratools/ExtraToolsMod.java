@@ -48,7 +48,7 @@ public class ExtraToolsMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModSoundEvents.SOUND_EVENTS.register(modEventBus);
+        ModSoundEvents.register(modEventBus);
 
         ModDataComponents.register(modEventBus);
 
