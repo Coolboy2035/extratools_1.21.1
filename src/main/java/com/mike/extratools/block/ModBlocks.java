@@ -2,12 +2,15 @@ package com.mike.extratools.block;
 
 import com.mike.extratools.ExtraToolsMod;
 import com.mike.extratools.item.ModItems;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -20,10 +23,13 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SILVER_BLOCK = registerBlock("silver_block",
             ()-> new Block(BlockBehaviour.Properties.of()
-                    .strength(1F,6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+                    .strength(1F,6F).requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
                                         //破坏时间-4=实际填的数
     public static final DeferredBlock<Block> SILVER_ORE = registerBlock("silver_ore",
-            ()-> new Block(BlockBehaviour.Properties.of()
+            ()-> new DropExperienceBlock(ConstantInt.of(0),
+                    BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(3.0F,3.0F)
                     .sound(SoundType.STONE)));
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
             ()-> new DingzhenBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
