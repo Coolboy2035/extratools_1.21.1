@@ -33,11 +33,11 @@ public class DingzhenBlock extends Block {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (!level.isClientSide()) {
+        if (level.isClientSide()) {
             SoundEvent soundToPlay = SOUNDS[currentSoundIndex];
 
             level.playSound(
-                    null,
+                    player,
                     pos,
                     soundToPlay,
                     SoundSource.BLOCKS,
@@ -51,7 +51,12 @@ public class DingzhenBlock extends Block {
             // 可选：在聊天框显示当前播放的声音序号
             player.sendSystemMessage(Component.literal(
                     "Playing sound #" + (currentSoundIndex + 1) + " of " + SOUNDS.length
-            ));
+            ),
+            true
+        );
+        }
+        if (!level.isClientSide()) {
+            currentSoundIndex = (currentSoundIndex + 1) % SOUNDS.length;
         }
         return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
