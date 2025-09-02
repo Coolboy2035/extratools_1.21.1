@@ -15,7 +15,7 @@ public class ModSoundEvents {
     public static final DeferredHolder<SoundEvent, SoundEvent> DINGZHEN_SOUND = register("block.dingshen_sound");
     private static DeferredHolder<SoundEvent, SoundEvent> register(String name) {
         return SOUND_EVENTS.register(name, () -> 
-            SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(ExtraTools.MODID, name))
+            SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(ExtraToolsMod.MODID, name))
         );
     }
 }
