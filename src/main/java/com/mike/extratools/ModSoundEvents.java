@@ -1,6 +1,6 @@
 package com.mike.extratools.sounds;
 
-import com.mike.extratools.ExtraTools;
+import com.mike.extratools.ExtraToolsMod;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
