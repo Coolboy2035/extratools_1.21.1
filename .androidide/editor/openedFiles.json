@@ -1,0 +1,140 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/generated/resources/data/extratoolsmod/recipe/silver_nugget.json",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/component/ModDataComponents.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/ModClient.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/Config.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": 0,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/ExtraToolsMod.java",
+      "selection": {
+        "end": {
+          "column": 56,
+          "index": 3218,
+          "line": 68
+        },
+        "start": {
+          "column": 56,
+          "index": 3218,
+          "line": 68
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/resources/assets/extratoolsmod/sound.json",
+      "selection": {
+        "end": {
+          "column": 2,
+          "index": 98,
+          "line": 6
+        },
+        "start": {
+          "column": 2,
+          "index": 98,
+          "line": 6
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/ModSoundEvents.java",
+      "selection": {
+        "end": {
+          "column": 71,
+          "index": 608,
+          "line": 14
+        },
+        "start": {
+          "column": 71,
+          "index": 608,
+          "line": 14
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/blocks/SoundBlockDingzhen.java",
+      "selection": {
+        "end": {
+          "column": 31,
+          "index": 712,
+          "line": 20
+        },
+        "start": {
+          "column": 31,
+          "index": 712,
+          "line": 20
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/blocks/ModBlocks.java",
+      "selection": {
+        "end": {
+          "column": 39,
+          "index": 1362,
+          "line": 28
+        },
+        "start": {
+          "column": 39,
+          "index": 1362,
+          "line": 28
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/extratools_1.21.1/src/main/java/com/mike/extratools/blocks/ModBlocks.java"
+}
