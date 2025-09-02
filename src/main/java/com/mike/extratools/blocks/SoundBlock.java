@@ -1,9 +1,8 @@
 package com.mike.extratools.blocks;
 
+import com.mike.extratools.sounds.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -16,13 +15,10 @@ import net.minecraft.world.InteractionHand;
 import java.util.Random;
 
 public class SoundBlock extends Block {
-    private static final SoundEvent[] SOUNDS = {
-        SoundEvents.VILLAGER_AMBIENT,
-        SoundEvents.VILLAGER_HURT,
-        SoundEvents.VILLAGER_DEATH,
-        SoundEvents.VILLAGER_YES,
-        SoundEvents.VILLAGER_NO,
-        SoundEvents.VILLAGER_TRADE
+
+    // 使用自定义声音事件
+    private static final SoundEvent[] CUSTOM_SOUNDS = {
+        ModSoundEvents.DINGZHEN_SOUND.get()
     };
 
     public SoundBlock(Properties properties) {
@@ -33,14 +29,13 @@ public class SoundBlock extends Block {
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
             Random random = new Random();
-            
-            SoundEvent soundToPlay = SOUNDS[random.nextInt(SOUNDS.length)];
+            SoundEvent soundToPlay = CUSTOM_SOUNDS[random.nextInt(CUSTOM_SOUNDS.length)];
             
             level.playSound(
                 null,
                 pos,
                 soundToPlay,
-                SoundSource.BLOCKS,
+                net.minecraft.sounds.SoundSource.BLOCKS,
                 1.0F,
                 1.0F
             );
