@@ -66,10 +66,13 @@ public class ExtraToolsMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModSoundEvents.SOUND_EVENTS.register(modEventBus)
 
         ModDataComponents.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
+        
+        
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
