@@ -1,7 +1,7 @@
 package com.mike.extratools.datagen;
 
 import com.mike.extratools.ExtraToolsMod;
-import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -21,18 +21,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SILVER_ORE);
 
 
-        cutoutBlockWithItem(ModBlocks.KAIWEN_BLOCK);
-        cutoutBlockWithItem(ModBlocks.XUANYU_BLOCK);
+        cutoutBlockWithItem(ModBlocks.KAIWEN_BLOCK,"cutout");
+        cutoutBlockWithItem(ModBlocks.XUANYU_BLOCK,"cutout");
 
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock){
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
-    private void cutoutBlockWithItem(DeferredBlock<?> deferredBlock){
+    private void cutoutBlockWithItem(DeferredBlock<?> deferredBlock,String renderType){
         Block block = deferredBlock.get();
-        ModelFile model =models().cubeAll(block.getDescriptionId(),
-                blockTexture(block)).renderType("cutout");
+        String blockId = deferredBlock.getId().getPath();
+        ModelFile model =models().cubeAll(blockId,
+                blockTexture(block)).renderType(renderType);
         simpleBlockWithItem(block,model);
     }
 }

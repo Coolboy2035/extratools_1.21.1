@@ -1,0 +1,26 @@
+{
+  "block.ding1_sound": {
+    "sounds": [{"name":"extratoolsmod:block/ding1_sound","volume": 0.03}],
+    "subtitle": "subtitle.extratoolsmod.ding1_sound"
+  },
+  "block.ding2_sound": {
+    "sounds": [{"name":"extratoolsmod:block/ding2_sound","volume": 0.03}],
+    "subtitle": "subtitle.extratoolsmod.ding2_sound"
+  },
+  "block.ding3_sound": {
+    "sounds": [{"name":"extratoolsmod:block/ding3_sound","volume": 0.025}],
+    "subtitle": "subtitle.extratoolsmod.ding3_sound"
+  },
+  "block.ding4_sound": {
+    "sounds": [{"name":"extratoolsmod:block/ding4_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.ding4_sound"
+  },
+  "block.ding5_sound": {
+    "sounds": [{"name":"extratoolsmod:block/ding5_sound","volume": 0.06}],
+    "subtitle": "subtitle.extratoolsmod.ding5_sound"
+  },
+  "block.ding6_sound": {
+    "sounds": [{"name":"extratoolsmod:block/ding6_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.ding6_sound"
+  }
+}

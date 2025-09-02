@@ -1,7 +1,7 @@
 package com.mike.extratools.item;
 
 import com.mike.extratools.ExtraToolsMod;
-import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;

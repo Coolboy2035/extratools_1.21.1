@@ -1,4 +1,4 @@
-package com.mike.extratools.blocks;
+package com.mike.extratools.block;
 
 import com.mike.extratools.ExtraToolsMod;
 import com.mike.extratools.item.ModItems;

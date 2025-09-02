@@ -1,6 +1,6 @@
 package com.mike.extratools;
 
-import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.block.ModBlocks;
 import com.mike.extratools.component.ModDataComponents;
 import com.mike.extratools.item.ModCreativeModeTabs;
 import com.mike.extratools.item.ModItems;
@@ -46,9 +46,10 @@ public class ExtraToolsMod {
 
         ModCreativeModeTabs.register(modEventBus);
 
+        ModSoundEvents.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModSoundEvents.register(modEventBus);
+
 
         ModDataComponents.register(modEventBus);
 
@@ -58,6 +59,7 @@ public class ExtraToolsMod {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
