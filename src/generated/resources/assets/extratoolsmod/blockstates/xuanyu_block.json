@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "extratoolsmod:block/xuanyu_block"
+      "model": "extratoolsmod:block/block.extratoolsmod.xuanyu_block"
     }
   }
 }

@@ -30,10 +30,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.SILVER_BLOCK.get());
 
-        add(ModBlocks.XUANYU_BLOCK.get(),
-                block -> createMultipleOreDrops(ModBlocks.XUANYU_BLOCK.get(), Items.COAL,2,5));
-                               //createMultipleOreDrops(ModBlocks.XUANYU_BLOCK.get(), Items.COAL,2,5)
-                                                                                 //ModItems.~.get()
         add(ModBlocks.SILVER_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.SILVER_NUGGET.get(),7,9));
     }

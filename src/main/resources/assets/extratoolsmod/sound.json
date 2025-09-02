@@ -1,7 +1,38 @@
 {
-  "block.dingzhen_sound": {
+  "block.ding1_sound": {
     "sounds": [
-      "extratools:block/dingzhen_sound"
+      {
+        "name": "extratoolsmod:block/ding1_sound",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "block.ding2_sound": {
+    "sounds": [
+      {
+        "name": "extratoolsmod:block/ding2_sound",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "block.ding3_sound": {
+    "sounds": [
+      {
+        "name": "extratoolsmod:block/ding3_sound",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "block.ding4_sound": {
+    "sounds": [
+      {
+        "name": "extratoolsmod:block/ding4_sound",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
     ]
   }
-}0
+}

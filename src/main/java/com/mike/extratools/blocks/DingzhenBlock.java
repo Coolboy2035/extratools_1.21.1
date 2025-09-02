@@ -1,6 +1,8 @@
 package com.mike.extratools.blocks;
 
+import com.mike.extratools.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,35 +17,41 @@ import net.minecraft.world.InteractionHand;
 
 import java.util.Random;
 
-public class SoundBlock extends Block {
+public class DingzhenBlock extends Block {
     private static final SoundEvent[] SOUNDS = {
-        SoundEvents.VILLAGER_AMBIENT,
-        SoundEvents.VILLAGER_HURT,
-        SoundEvents.VILLAGER_DEATH,
-        SoundEvents.VILLAGER_YES,
-        SoundEvents.VILLAGER_NO,
-        SoundEvents.VILLAGER_TRADE
-    };
+            ModSoundEvents.DING1_SOUND.get(),
+            ModSoundEvents.DING2_SOUND.get(),
+            ModSoundEvents.DING3_SOUND.get(),
+            ModSoundEvents.DING4_SOUND.get()
 
-    public SoundBlock(Properties properties) {
+    };
+    private static int currentSoundIndex = 0;
+
+    public DingzhenBlock(Properties properties) {
         super(properties);
     }
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (!level.isClientSide()) {
-            Random random = new Random();
-            
-            SoundEvent soundToPlay = SOUNDS[random.nextInt(SOUNDS.length)];
-            
+            SoundEvent soundToPlay = SOUNDS[currentSoundIndex];
+
             level.playSound(
-                null,
-                pos,
-                soundToPlay,
-                SoundSource.BLOCKS,
-                1.0F,
-                1.0F
+                    null,
+                    pos,
+                    soundToPlay,
+                    SoundSource.BLOCKS,
+                    1.0F,
+                    1.0F
             );
+
+            // 移动到下一个声音（循环播放）
+            currentSoundIndex = (currentSoundIndex + 1) % SOUNDS.length;
+
+            // 可选：在聊天框显示当前播放的声音序号
+            player.sendSystemMessage(Component.literal(
+                    "Playing sound #" + (currentSoundIndex + 1) + " of " + SOUNDS.length
+            ));
         }
         return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }

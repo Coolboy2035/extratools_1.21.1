@@ -26,8 +26,8 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.of()
                     .sound(SoundType.STONE)));
     public static final DeferredBlock<Block> XUANYU_BLOCK = registerBlock("xuanyu_block",
-            ()-> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
-                    .noOcclusion().sound(SoundType.GLASS)));
+            ()-> new DingzhenBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
+                    .noOcclusion().sound(SoundType.GLASS).noLootTable()));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
                     .noOcclusion().sound(SoundType.GLASS).noLootTable()));
