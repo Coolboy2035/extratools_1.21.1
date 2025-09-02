@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = 
-        DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, ExtraTools.MODID);
+        DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, ExtraToolsMod.MODID);
 
     // 注册自定义声音事件
     public static final DeferredHolder<SoundEvent, SoundEvent> DINGZHEN_SOUND = register("block.dingshen_sound");
