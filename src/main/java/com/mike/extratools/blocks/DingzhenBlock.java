@@ -48,12 +48,7 @@ public class DingzhenBlock extends Block {
             // 移动到下一个声音（循环播放）
             currentSoundIndex = (currentSoundIndex + 1) % SOUNDS.length;
 
-            // 可选：在聊天框显示当前播放的声音序号
-            player.sendSystemMessage(Component.literal(
-                    "Playing sound #" + (currentSoundIndex + 1) + " of " + SOUNDS.length
-            ),
-            true
-        );
+    
         }
         if (!level.isClientSide()) {
             currentSoundIndex = (currentSoundIndex + 1) % SOUNDS.length;
