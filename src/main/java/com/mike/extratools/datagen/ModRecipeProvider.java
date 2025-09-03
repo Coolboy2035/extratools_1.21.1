@@ -1,9 +1,8 @@
 package com.mike.extratools.datagen;
 
 import com.mike.extratools.ExtraToolsMod;
-import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.block.ModBlocks;
 import com.mike.extratools.item.ModItems;
-import net.minecraft.ResourceLocationException;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;

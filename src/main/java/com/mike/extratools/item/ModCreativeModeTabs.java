@@ -1,7 +1,7 @@
 package com.mike.extratools.item;
 
 import com.mike.extratools.ExtraToolsMod;
-import com.mike.extratools.blocks.ModBlocks;
+import com.mike.extratools.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -39,6 +39,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.XUANYU_BLOCK);
                         output.accept(ModBlocks.KAIWEN_BLOCK);
+                        output.accept(ModBlocks.KANGZHAN_BLOCK);
 
                     }).build());
 

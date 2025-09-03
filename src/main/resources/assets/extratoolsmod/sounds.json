@@ -1,0 +1,38 @@
+{
+  "block.zhange1_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange1_sound","volume": 0.03}],
+    "subtitle": "subtitle.extratoolsmod.zhange1_sound"
+  },
+  "block.zhange2_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange2_sound","volume": 0.03}],
+    "subtitle": "subtitle.extratoolsmod.zhange2_sound"
+  },
+  "block.zhange3_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange3_sound","volume": 0.025}],
+    "subtitle": "subtitle.extratoolsmod.zhange3_sound"
+  },
+  "block.zhange4_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange4_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.zhange4_sound"
+  },
+  "block.zhange5_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange5_sound","volume": 0.06}],
+    "subtitle": "subtitle.extratoolsmod.zhange5_sound"
+  },
+  "block.zhange6_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange6_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.zhange6_sound"
+  },
+  "block.zhange7_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange7_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.zhange7_sound"
+  },
+  "block.zhange8_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange8_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.zhange8_sound"
+  },
+  "block.zhange9_sound": {
+    "sounds": [{"name":"extratoolsmod:block/zhange9_sound","volume": 0.02}],
+    "subtitle": "subtitle.extratoolsmod.zhange9_sound"
+  }
+}
