@@ -1,6 +1,7 @@
 package com.mike.extratools.block;
 
 import com.mike.extratools.ModSoundEvents;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -15,16 +16,9 @@ import net.minecraft.world.InteractionHand;
 
 public class KangzhanBlock extends Block {
     private static final SoundEvent[] SOUNDS = {
-            ModSoundEvents.ZHANGE1_SOUND.get(),
-            ModSoundEvents.ZHANGE2_SOUND.get(),
-            ModSoundEvents.ZHANGE3_SOUND.get(),
-            ModSoundEvents.ZHANGE4_SOUND.get(),
-            ModSoundEvents.ZHANGE5_SOUND.get(),
-            ModSoundEvents.ZHANGE6_SOUND.get(),
-            ModSoundEvents.ZHANGE7_SOUND.get(),
-            ModSoundEvents.ZHANGE8_SOUND.get(),
-            ModSoundEvents.ZHANGE9_SOUND.get()
+            ModSoundEvents.ZHANGE_SOUND.get()
     };
+    private static int currentSoundIndex = 0;
 
     public KangzhanBlock(Properties properties) {
         super(properties);
@@ -32,12 +26,33 @@ public class KangzhanBlock extends Block {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            // 直接在客户端播放所有声音
-            for (SoundEvent sound : SOUNDS) {
-                level.playSound(player, pos, sound, SoundSource.BLOCKS, 1.0F, 1.0F);
+        // 检查是否按下了Shift键
+        if (player.isShiftKeyDown()) {
+            if (level.isClientSide()) {
+                SoundEvent soundToPlay = SOUNDS[currentSoundIndex];
+
+                level.playSound(
+                        player,
+                        pos,
+                        soundToPlay,
+                        SoundSource.BLOCKS,
+                        1.0F,
+                        1.0F
+                );
+
+                // 移动到下一个声音（循环播放）
+                currentSoundIndex = (currentSoundIndex + 1) % SOUNDS.length;
             }
+
+            // 在服务器端也更新索引以保持同步
+            if (!level.isClientSide()) {
+                currentSoundIndex = (currentSoundIndex + 1) % SOUNDS.length;
+            }
+
+            return ItemInteractionResult.sidedSuccess(level.isClientSide());
         }
-        return ItemInteractionResult.sidedSuccess(level.isClientSide());
+
+        // 如果没有按下Shift键，执行默认行为
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 }
