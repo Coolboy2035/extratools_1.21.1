@@ -39,7 +39,6 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.XUANYU_BLOCK);
                         output.accept(ModBlocks.KAIWEN_BLOCK);
-                        output.accept(ModBlocks.KANGZHAN_BLOCK);
 
                     }).build());
 

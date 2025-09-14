@@ -1,6 +1,5 @@
 {
   "block.zhange_sound": {
-    "sounds": [{"name":"extratoolsmod:block/zhange_sound","volume": 0.1}],
-    "subtitle": "subtitle.extratoolsmod.zhange_sound"
+    "sounds": [{"name":"extratoolsmod:block/zhange_sound","volume": 0.1}]
   }
 }
