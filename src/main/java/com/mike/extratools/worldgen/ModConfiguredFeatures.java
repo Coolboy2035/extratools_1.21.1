@@ -20,6 +20,8 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SILVER_ORE_KEY = registerKey("silver_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SILVER_ORE_SMALL_KEY = registerKey("silver_ore_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SILVER_ORE_LARGE_KEY = registerKey("silver_ore_large");
 
 
 
@@ -30,10 +32,19 @@ public class ModConfiguredFeatures {
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
+        // 银矿石可以在石头和深板岩中生成
         List<OreConfiguration.TargetBlockState> overworldSilverOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.SILVER_ORE.get().defaultBlockState()));
+                OreConfiguration.target(stoneReplaceables, ModBlocks.SILVER_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.SILVER_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSilverOres, 11));
+        // 普通矿脉 - 矿脉大小8个方块
+        register(context, OVERWORLD_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSilverOres, 8));
+        
+        // 小型矿脉 - 矿脉大小4个方块，更常见
+        register(context, OVERWORLD_SILVER_ORE_SMALL_KEY, Feature.ORE, new OreConfiguration(overworldSilverOres, 4));
+        
+        // 大型矿脉 - 矿脉大小12个方块，稀有
+        register(context, OVERWORLD_SILVER_ORE_LARGE_KEY, Feature.ORE, new OreConfiguration(overworldSilverOres, 12));
 
     }
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

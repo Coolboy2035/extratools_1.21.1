@@ -35,7 +35,7 @@ public class ModBlocks {
                     .noOcclusion().sound(SoundType.GLASS)));
     public static final DeferredBlock<Block> KAIWEN_BLOCK = registerBlock("kaiwen_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
-                    .noOcclusion().sound(SoundType.GLASS).noLootTable()));
+                    .noOcclusion().sound(SoundType.GLASS).noLootTable()));.
 
 
     public static final DeferredBlock<Block> KANGZHAN_BLOCK = registerBlock("kangzhan_block",

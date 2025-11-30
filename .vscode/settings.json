@@ -1,0 +1,25 @@
+{
+  // 关闭 Java 空值安全检查警告
+  "java.compile.nullAnalysis.mode": "disabled",
+  
+  // 忽略不完整的类路径警告
+  "java.errors.incompleteClasspath.severity": "ignore",
+  
+  // 设置问题严重性级别（只显示错误，不显示警告）
+  "problems.showCurrentInSource": false,
+  
+  // 可选：只在保存时显示问题
+  "java.autobuild.enabled": true,
+  
+  // 关闭未使用代码的警告
+  "java.completion.filteredTypes": [
+    "java.awt.*",
+    "com.sun.*"
+  ],
+  
+  // 设置编译器选项 - 忽略某些警告
+  "java.configuration.runtimes": [],
+  
+  // 设置诊断严重性
+  "java.diagnostics.severity": "error"
+}

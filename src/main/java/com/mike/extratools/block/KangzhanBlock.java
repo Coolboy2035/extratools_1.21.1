@@ -1,7 +1,6 @@
 package com.mike.extratools.block;
 
 import com.mike.extratools.ModSoundEvents;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
