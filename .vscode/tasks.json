@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1runClientextratools_1.21.1",
+			"script": "runClient",
+			"description": "Runs the client Minecraft run configuration.",
+			"group": "mod development",
+			"project": "extratools_1.21.1",
+			"buildFile": "C:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1\\build.gradle",
+			"rootProject": "extratools_1.21.1",
+			"projectFolder": "c:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1",
+			"workspaceFolder": "c:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: runClient"
+		}
+	]
+}
