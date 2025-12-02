@@ -1,6 +1,7 @@
 package com.mike.extratools.block;
 
 import com.mike.extratools.ExtraToolsMod;
+import com.mike.extratools.item.KangzhanBlockItem;
 import com.mike.extratools.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
@@ -38,7 +39,7 @@ public class ModBlocks {
                     .noOcclusion().sound(SoundType.GLASS).noLootTable()));
 
 
-    public static final DeferredBlock<Block> KANGZHAN_BLOCK = registerBlock("kangzhan_block",
+    public static final DeferredBlock<Block> KANGZHAN_BLOCK = registerKangzhanBlock("kangzhan_block",
             ()-> new KangzhanBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.AMETHYST).noLootTable()));
 
@@ -51,6 +52,16 @@ public class ModBlocks {
     }
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties()));
+    }
+    
+    /**
+     * 为抗战方块注册特殊的物品类（带彩色字体效果）
+     */
+    private static <T extends Block> DeferredBlock<T> registerKangzhanBlock(String name, Supplier<T> block) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        // 使用自定义的 KangzhanBlockItem 类
+        ModItems.ITEMS.register(name, ()-> new KangzhanBlockItem(toReturn.get(), new Item.Properties()));
+        return toReturn;
     }
     public static void register(IEventBus eventbus) {
         BLOCKS.register(eventbus);

@@ -1,7 +1,10 @@
 package com.mike.extratools.block;
 
 import com.mike.extratools.ModSoundEvents;
+import com.mike.extratools.client.ColorFontEffects;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.ItemInteractionResult;
@@ -22,7 +25,29 @@ public class KangzhanBlock extends Block {
     public KangzhanBlock(Properties properties) {
         super(properties);
     }
-
+    
+    /**
+     * 获取彩色名称（可在其他地方使用）
+     * 这是如何使用 ColorFontEffects 的示例
+     */
+    public static Component getColoredName() {
+        return ColorFontEffects.createColorText("抗日战争胜利80周年");
+    }
+    
+    /**
+     * 获取静态三色名称示例
+     
+    public static Component () {
+        return ColorFontEffects.createStaticTriColorText("抗战纪念");
+    }
+    
+    /**
+     * 获取自定义渐变名称示例
+     
+    public static Component getCustomGradientName(String text, int startColor, int endColor) {
+        return ColorFontEffects.createGradientText(text, startColor, endColor);
+    }
+*/
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         // 检查是否按下了Shift键
