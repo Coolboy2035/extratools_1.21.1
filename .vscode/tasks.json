@@ -18,6 +18,24 @@
 				"$gradle"
 			],
 			"label": "gradle: runClient"
+		},
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1runDataextratools_1.21.1",
+			"script": "runData",
+			"description": "Runs the data Minecraft run configuration.",
+			"group": "mod development",
+			"project": "extratools_1.21.1",
+			"buildFile": "C:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1\\build.gradle",
+			"rootProject": "extratools_1.21.1",
+			"projectFolder": "c:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1",
+			"workspaceFolder": "c:\\Users\\nk\\Desktop\\Minecraft\\Custom_Mods\\extratools_1.21.1",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: runData"
 		}
 	]
 }
