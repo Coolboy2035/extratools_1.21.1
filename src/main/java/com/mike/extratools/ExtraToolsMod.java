@@ -86,21 +86,7 @@ public class ExtraToolsMod {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
-            event.enqueueWork(() -> {
-                // 注册客户端事件处理器
-                registerClientEvents();
-            });
         }
-    }
-    
-    /**
-     * 注册客户端事件（在客户端侧）
-     */
-    private static void registerClientEvents() {
-        // 注册彩色字体事件处理器
-        NeoForge.EVENT_BUS.addListener(com.mike.extratools.client.ColorFontEventHandler::onItemTooltip);
-        
-        LOGGER.info("已注册彩色字体事件处理!");
     }
 
 }
