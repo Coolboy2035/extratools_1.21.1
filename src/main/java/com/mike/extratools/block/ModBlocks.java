@@ -1,6 +1,8 @@
 package com.mike.extratools.block;
 
 import com.mike.extratools.ExtraToolsMod;
+import com.mike.extratools.client.ModFontStyle;
+import com.mike.extratools.item.FontBlockItem;
 import com.mike.extratools.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
@@ -48,6 +50,15 @@ public class ModBlocks {
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties()));
     }
+    private static <T extends Block> DeferredBlock<T> registerBlockWithFont(String name, Supplier<T> block, ModFontStyle fontStyle) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItemWithFont(name, toReturn, fontStyle);
+        return toReturn;
+    }
+    private static <T extends Block> void registerBlockItemWithFont(String name, DeferredBlock<T> block, ModFontStyle fontStyle) {
+        ModItems.ITEMS.register(name, () -> new FontBlockItem(block.get(), new Item.Properties(), fontStyle));
+    }
+
     public static void register(IEventBus eventbus) {
         BLOCKS.register(eventbus);
     }

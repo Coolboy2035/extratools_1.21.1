@@ -1,0 +1,4 @@
+// 1.21	2025-12-09T23:42:16.7328759	Tags for minecraft:block mod id extratoolsmod
+de0a4b2fb5e0dd18a2c2c6e9ec03c868b76ad410 data/extratoolsmod/tags/block/incorrect_for_copper_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/extratoolsmod/tags/block/need_copper_tool.json
+aa6113aa71433e2a9a500ae1a8e6551f109622b0 data/minecraft/tags/block/mineable/pickaxe.json
